@@ -36,11 +36,13 @@ but the name of that same asset, in its bag is "foobar_pm".
 ruby ./bin/generate_mapping_files.rb /PATH/TO/CSV.csv
 # output files go into ./output/[TIMESTAMP]/
 ```
+See [the example CSV](examples/example_csv.csv) for guidance on how it's formatted.
 
 2. Upload Mappings to S3
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+aws s3 sync ./PATH/TO/TODAYS/OUTPUT/DIR/ s3://bucket-name/ --acl public-read --delete --profile aws-profile-name
 ```
+This will delete JSON files that are on S3 but not in the output directory.
 
-See [the example CSV](examples/example_csv.csv) for guidance on how it's formatted.
+For more info see [s3 sync's documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html).
