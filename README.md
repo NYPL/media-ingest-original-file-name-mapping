@@ -34,7 +34,7 @@ but the name of that same asset, in its bag is "foobar_pm".
 
 ```
 ruby ./bin/generate_mapping_files.rb /PATH/TO/CSV.csv
-# output files go into ./output
+# output files go into ./output/[TIMESTAMP]/
 ```
 
 2. Upload Mappings to S3
