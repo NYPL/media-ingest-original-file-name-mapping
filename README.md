@@ -38,6 +38,8 @@ ruby ./bin/generate_mapping_files.rb /PATH/TO/CSV.csv
 ```
 See [the example CSV](examples/example_csv.csv) for guidance on how it's formatted.
 
+**We keep the lastest CSV in source control - [here](./mms_name_match.csv)**
+
 2. Upload Mappings to S3
 
 ```
