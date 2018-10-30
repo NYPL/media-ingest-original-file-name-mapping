@@ -42,6 +42,8 @@ See [the example CSV](examples/example_csv.csv) for guidance on how it's formatt
 
 2. Upload Mappings to S3
 
+We keep these in a bucket named: `ami-filename-mappings`.
+
 ```
 aws s3 sync ./PATH/TO/TODAYS/OUTPUT/DIR/ s3://bucket-name/ --acl public-read --delete --profile aws-profile-name
 ```
